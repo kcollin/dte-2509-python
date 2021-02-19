@@ -1,6 +1,7 @@
 import mysql.connector
+from mysql.connector import errorcode
 
-class StudentRegister:
+class StudReg:
 
     def __init__(self) -> None:
         dbconfig = {'host': 'kark.uit.no',
@@ -26,11 +27,9 @@ class StudentRegister:
 
     def visAlle(self):
         try:
-            self.cursor.execute("SELECT * FROM student ORDER BY etternavn ASC");
+            self.cursor.execute("SELECT * FROM student_v21 ORDER BY lastName ASC");
             result = self.cursor.fetchall()
-        except:
-                print $e->getMessage().PHP_EOL;
+        except mysql.connector.Error as err:
+                print(err)
 
         return result
-
-    }

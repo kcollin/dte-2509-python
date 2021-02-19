@@ -4,6 +4,7 @@
 
 from flask import Flask, render_template
 from StudentRegister import StudReg
+from student import Student
 
 app = Flask(__name__)
 
@@ -13,8 +14,9 @@ def hello() -> 'html':
 
     with StudReg() as db:
         result = db.visAlle()
-    return render_template('students.html',
-                           students= result)
+    students = [Student(*x) for x in result]
+    return render_template('students2.html',
+                           students= students)
 
 if __name__ == "__main__":
     app.run(debug=True)

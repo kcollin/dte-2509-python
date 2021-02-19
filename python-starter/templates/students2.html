@@ -10,8 +10,8 @@
             <tbody>
                 {% for student in students %}
                 <tr>
-                    <td>{{ student[1] }}</td>
-                    <td>{{ student[2]  }}</td>
+                    <td>{{ student.givenName }}</td>
+                    <td><a href="?id={{ student.id  }}">{{student.lastName  }}</a></td>
                 </tr>
                 {% endfor %}
             </tbody>
