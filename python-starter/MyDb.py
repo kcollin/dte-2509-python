@@ -4,9 +4,9 @@ class MyDb:
 
     def __init__(self) -> None:
         dbconfig = {'host': '127.0.0.1',
-                    'user': 'myDb',
+                    'user': 'user',
                     'password': 'test',
-                    'database': 'user', }
+                    'database': 'myDb', }
         self.configuration = dbconfig
 
     def __enter__(self) -> 'cursor':
