@@ -4,10 +4,10 @@
 
 import mysql.connector
 from flask import Flask, render_template, request, escape
-dbconfig = { 'host': 'kark.uit.no',
-    'user': 'test_v19',
-    'password': '*****',
-    'database': 'test_v19', }
+dbconfig = { 'host': '127.0.0.1',
+    'user': 'user',
+    'password': 'test',
+    'database': 'myDb', }
 app = Flask(__name__)
 @app.route('/')
 

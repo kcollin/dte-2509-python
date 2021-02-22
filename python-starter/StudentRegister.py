@@ -4,10 +4,10 @@ from mysql.connector import errorcode
 class StudReg:
 
     def __init__(self) -> None:
-        dbconfig = {'host': 'kark.uit.no',
-                    'user': 'test_v19',
-                    'password': '$py@uit-v21',
-                    'database': 'test_v19', }
+        dbconfig = {'host': '127.0.0.1',
+                    'user': 'user',
+                    'password': 'test',
+                    'database': 'myDb', }
         self.configuration = dbconfig
 
     def __enter__(self) -> 'cursor':
